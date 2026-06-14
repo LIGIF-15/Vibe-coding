@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEON_NEXUS // Terminal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;600&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="scanlines"></div>
+    <div class="crt-overlay"></div>
+    <div class="container">
+        <!-- HEADER -->
+        <header class="top-bar">
+            <h1 class="game-title glow-pulse">NEON_NEXUS <span>v2.4.1</span></h1>
+            <div class="player-stats">
+                <div class="stat"><span class="label">HP</span> <span class="value hp">100/100</span></div>
+                <div class="stat"><span class="label">CREDITS</span> <span class="value credits">13,040 Ƀ</span></div>
+                <div class="stat"><span class="label">HACK</span> <span class="value lvl" id="hack-progress">0/3</span></div>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <!-- MAIN DISPLAY -->
+            <main class="display-area" id="display-area">
+                <div class="message system">SYSTEM: Initializing Neon Nexus Terminal...</div>
+                <div class="message system">SYSTEM: Connection established. Neural link stable.</div>
+                <div class="message description">You find yourself in Sector 4, a dimly lit alleyway in the lower megacity levels. Acid rain pours continuously, reflecting the holographic advertisements of the megacorporations above.</div>
+                <div class="message description">To your left, a damaged security bot is sparking weakly. To your right, an access panel seems vulnerable.</div>
+                <div class="message info">HINT: Try typing 'scan' to analyze the area, or 'help' for commands.</div>
+            </main>
+
+            <!-- INVENTORY PANEL -->
+            <aside class="inventory-panel">
+                <h2 class="inventory-title">INVENTORY</h2>
+                <ul class="inventory-list" id="inventory-list">
+                    <li class="inventory-item">
+                        <span class="icon">💻</span>
+                        <span class="item-name">Cyberdeck</span>
+                    </li>
+                    <li class="inventory-item">
+                        <span class="icon">🔋</span>
+                        <span class="item-name">Energy Cell</span>
+                    </li>
+                </ul>
+            </aside>
+        </div>
+
+        <!-- INPUT LINE -->
+        <footer class="input-area">
+            <span class="prompt-symbol blink">&gt;</span>
+            <input type="text" id="command-input" class="command-input" placeholder="Enter command..." autocomplete="off" autofocus>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
