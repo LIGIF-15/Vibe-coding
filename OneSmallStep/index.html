@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OneSmallStep | Humanity's Journey to the Moon</title>
+    <meta name="description" content="Explore humanity's journey to the moon with interactive timelines, fun facts, and L.U.N.A. voice assistant.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@400;600;700&family=IBM+Plex+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-grid">
+        <div class="radar-sweep"></div>
+        <div class="coordinates top-left">LAT 00°40'26.69"N</div>
+        <div class="coordinates bottom-right">LON 23°28'22.69"E</div>
+        <div class="marker m1"></div>
+        <div class="marker m2"></div>
+    </div>
+
+    <nav class="glass-nav">
+        <div class="nav-content">
+            <div class="logo">
+                <div class="moon-pulse-icon"></div>
+                <span>OneSmallStep</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#hero">Mission Control</a></li>
+                <li><a href="#stats">Telemetry</a></li>
+                <li><a href="#timeline">Timeline</a></li>
+                <li><a href="#fun-facts">Fun Facts</a></li>
+                <li><a href="#quiz">Assessment</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="hero" class="hero-section">
+        <div class="hero-content">
+            <h1 class="holographic-headline">Humanity's Journey<br>to the Moon</h1>
+            <p class="subtitle">A comprehensive exploration of lunar missions from 1959 to the Artemis generation.</p>
+            <a href="#timeline" class="glow-button">Start Exploring</a>
+        </div>
+        <div class="hero-graphic">
+            <div class="system-container">
+                <div class="earth"></div>
+                <div class="moon-orbit">
+                    <div class="moon"></div>
+                </div>
+            </div>
+            <div class="badge-container">
+                <div class="luna-badge">L.U.N.A Showcase</div>
+                <div class="badge-details">
+                    <div>SYS: Online</div>
+                    <div>RES: <span id="res-spec">1920x1080</span></div>
+                    <div>ENG: Webkit</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="marquee-container">
+        <div class="marquee-content">
+            LUNA 2 IMPACTS SURFACE • APOLLO 11 LANDS • CHANG'E 4 FAR SIDE • CHANDRAYAAN-3 SOUTH POLE • ARTEMIS I SUCCESS • 
+            LUNA 2 IMPACTS SURFACE • APOLLO 11 LANDS • CHANG'E 4 FAR SIDE • CHANDRAYAAN-3 SOUTH POLE • ARTEMIS I SUCCESS •
+        </div>
+    </div>
+
+    <section id="stats" class="stats-section">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-value neon-text" data-target="384400">0</div>
+                <div class="stat-label">Average Distance (km)</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value neon-text" data-target="12">0</div>
+                <div class="stat-label">Humans Walked on Moon</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value neon-text" data-target="140">0</div>
+                <div class="stat-label">Successful Missions</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value neon-text" data-target="-233">0</div>
+                <div class="stat-label">Min Temperature (°C)</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="timeline" class="timeline-section">
+        <h2 class="section-title">Mission Timeline</h2>
+        <div class="timeline-container" id="timeline-container">
+            <!-- Timeline items injected by JS -->
+        </div>
+    </section>
+
+    <section id="fun-facts" class="facts-section">
+        <h2 class="section-title">Cosmic Curiosities</h2>
+        <div class="facts-grid">
+            <div class="fact-card">
+                <div class="fact-icon">🌕</div>
+                <h3>Synchronous Rotation</h3>
+                <p>The Moon rotates on its axis at the same rate that it orbits the Earth, which is why we always see the same side.</p>
+            </div>
+            <div class="fact-card">
+                <div class="fact-icon">👣</div>
+                <h3>Footprints Forever</h3>
+                <p>Without wind or water to erode them, the footprints left by Apollo astronauts will likely last for millions of years.</p>
+            </div>
+            <div class="fact-card">
+                <div class="fact-icon">🚀</div>
+                <h3>Computing Power</h3>
+                <p>The smartphone in your pocket has over 100,000 times more processing power than the computer that guided Apollo 11 to the Moon.</p>
+            </div>
+            <div class="fact-card">
+                <div class="fact-icon">🌍</div>
+                <h3>Moon Quakes</h3>
+                <p>Just like Earth, the Moon has quakes. Caused by the gravitational pull of Earth, they can last up to an hour.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="quiz" class="quiz-section">
+        <h2 class="section-title">Knowledge Assessment</h2>
+        <div class="quiz-container">
+            <div class="progress-container">
+                <div class="progress-bar" id="quiz-progress"></div>
+            </div>
+            <div id="quiz-content" class="quiz-content">
+                <!-- Quiz injected by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating L.U.N.A Voice Assistant -->
+    <div id="luna-widget" class="luna-widget">
+        <div class="luna-terminal hidden" id="luna-terminal">
+            <div class="terminal-header">
+                <span>Lunar Universal Navigation Assistant</span>
+                <div class="status-dot pulsing"></div>
+            </div>
+            <div class="terminal-body">
+                <div class="chat-log" id="chat-log">
+                    <div class="chat-message luna">System initialized. Awaiting voice input...</div>
+                </div>
+                <div class="listening-indicator hidden" id="listening-indicator">Listening...</div>
+            </div>
+        </div>
+        <div class="luna-button" id="luna-button">
+            <div class="luna-ring"></div>
+            <span class="luna-icon">L</span>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
